@@ -40,9 +40,10 @@ public class Stock {
         price = "" + stockData.get("l_cur");
         percentchg = " (" + stockData.get("cp") + "%)";
 
-        result = time + name + price + percentchg + "     ";
+        result = time+ "\n" + name + price + percentchg + "     ";
+        
         } catch (IOException ex){
-            result = "No Data     ";
+            result = name = "" + stockData.get("t") + ":  " + "No Data     ";
         }
 
         
