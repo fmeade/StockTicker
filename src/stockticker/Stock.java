@@ -34,34 +34,17 @@ public class Stock {
         
         result = "";
         
-        time = getTime(arrayIndex);
+        time = stockData.get("lt") + "   ";
         
         name = "" + stockData.get("t") + ":  ";
         price = "" + stockData.get("l_cur");
         percentchg = " (" + stockData.get("cp") + "%)";
 
-        result = time+ "\n" + name + price + percentchg + "     ";
+        result = time + name + price + percentchg;
         
         } catch (IOException ex){
-            result = name = "" + stockData.get("t") + ":  " + "No Data     ";
+            result = time + stockData.get("t") + ":  " + "No Data";
         }
-
-        
-
-    }
-    
-    public String getTime(int arrayIndex)
-    {
-        if(arrayIndex == 0)
-        {
-        time = "" + stockData.get("lt") + "   ";
-        }
-        else
-        {
-            time = "";
-        }
-        
-        return time;
     }
 
     public String getresult() {
