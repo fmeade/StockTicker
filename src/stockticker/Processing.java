@@ -8,15 +8,30 @@ import java.util.logging.*;
  * @author forrest_meade
  */
 public class Processing {
-
-    private String stockData = new String();
+    // Instance variable - holds stock string
+    private String stockData;
+    // Instance variable - Stock object
     private Stock stock;
+    // Instance variable - Stock tag
     protected final String[] stockID = {"GOOG", "MSFT", "AAPL", "RAX", "YHOO", "FB", "HPQ", "DELL", "CSCO"};
 
+    /**
+     * Instantiates the Instance variables
+     * 
+     * @param i stock index
+     * @throws Exception from calling the Stock class
+     */
     public Processing(int i) throws Exception {
-            stock = new Stock(stockID[i]);
-    }
+        stockData = new String();
+        stock = new Stock(stockID[i]);
+    }// end Processing constructor
 
+    /**
+     * Calls the readStock and getResult methods of Stock
+     * 
+     * @param i stock index
+     * @return the stock string
+     */
     public String process(int i) {
         try {
                 stock.readStock(i);
@@ -27,5 +42,5 @@ public class Processing {
         }
 
         return stockData;
-    }
-}
+    }// end process method
+}// end Processing class
