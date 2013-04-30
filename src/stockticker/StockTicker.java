@@ -5,7 +5,7 @@ package stockticker;
  * 
  * @author forrest_meade
  */
-public class Driver {
+public class StockTicker {
 
     /*
      * Calls and instantiates a Platform object

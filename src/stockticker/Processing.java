@@ -38,7 +38,7 @@ public class Processing {
                 stockData = stock.getresult();
                 
         } catch (Exception ex) {
-            Logger.getLogger(Driver.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(StockTicker.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         return stockData;

@@ -49,14 +49,14 @@ public class Stock {
 
             /* gets the stock data */
             time = stockData.get("lt") + "   ";
-            name = "" + stockData.get("t") + ":  ";
+            name = "" + stockData.get("t") + ": ";
             price = "" + stockData.get("l_cur");
             percentchg = " (" + stockData.get("cp") + "%)";
 
             result = time + name + price + percentchg;
 
         } catch (IOException ex) {
-            result = time + stockTag + ":  " + "No Data";
+            result = stockTag + ": " + "No Data";
         }
     }//end readStock method
 
